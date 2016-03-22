@@ -1,0 +1,14 @@
+{
+  "name": "lab1_8",
+  "version": "1.0.0",
+  "description": "Lab for webdesign",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vlad Kampov",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
