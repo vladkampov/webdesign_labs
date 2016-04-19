@@ -1,0 +1,19 @@
+{
+  "name": "lab1_8",
+  "version": "1.0.0",
+  "description": "Lab1 for webdesign",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vlad Kampov",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
