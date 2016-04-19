@@ -1,12 +1,12 @@
 {
-  "name": "lab1_8",
+  "name": "lab1_18",
   "version": "1.0.0",
   "description": "Lab1 for webdesign",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vlad Kampov",
+  "author": "Vlad Sydorenko",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.0.1",
