@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     coffee: {
       main: {
         files: {
-          'build/js/app.js': ['src/coffee/cookie.coffee', 'src/coffee/app.coffee']
+          'build/js/app.js': ['src/coffee/cookie.coffee', 'src/coffee/AlarmsCollection.coffee', 'src/coffee/AlarmModel.coffee', 'src/coffee/AlarmsView.coffee', 'src/coffee/app.coffee']
         }
       }
     },

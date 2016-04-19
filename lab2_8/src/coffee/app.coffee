@@ -1,20 +1,8 @@
-if (document.getCookie('alarms') is undefined)
-	document.arrayOfAlarms = []
-else
-	document.arrayOfAlarms = document.getCookie('alarms').split(',')
-
-class Alarm
-	_iter: 0
-	getCount: ->
-		@_iter
-	getTimestamp: ->
-		new Date(document.alarmForm.month.value + ' ' +
-		document.alarmForm.day.value + ' ' +
-		document.alarmForm.year.value + ' ' +
-		document.alarmForm.hour.value + ':' + 
-		document.alarmForm.min.value).getTime()
-	constructor: (@day, @month, @year, @hour, @min)->
-		@_iter++
+document.collectionOfAlarms = []
+if (document.getCookie('alarms') isnt undefined)
+	document.getCookie('alarms').split(',').forEach (item, i)->
+		tmp = new document.Alarm item
+		document.arrayOfAlarms.push tmp
 
 document.formValidation = ()->
 	day = document.alarmForm.day.value
@@ -27,18 +15,10 @@ document.formValidation = ()->
 		return false
 
 document.setAlarm = ()->
-	newAlarm = new Alarm parseInt(document.alarmForm.day.value), 
-						parseInt(document.alarmForm.month.value), 
-						parseInt(document.alarmForm.year.value), 
-						parseInt(document.alarmForm.hour.value),
-						parseInt(document.alarmForm.min.value)
+	newAlarm = new document.Alarm new Date(parseInt(document.alarmForm.month.value) + ' ' +
+								parseInt(document.alarmForm.day.value) + ' ' +
+								parseInt(document.alarmForm.year.value) + ' ' +
+								parseInt(document.alarmForm.hour.value) + ':' +
+								parseInt(document.alarmForm.min.value)).getTime()
 
-	if Date.now() > newAlarm.getTimestamp()
-		alert "Check values of inputs. Alarm time will be bigger than current time"
-		return false
-	else
-		if document.getCookie('alarms') is undefined
-			document.setCookie 'alarms', newAlarm.getTimestamp() + ','
-		else
-			document.setCookie 'alarms', document.getCookie('alarms') + newAlarm.getTimestamp() + ','
-		return true
+new AlarmsView 

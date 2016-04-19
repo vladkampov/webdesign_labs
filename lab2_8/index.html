@@ -14,7 +14,7 @@
     </div>
     <div id="content" class="row">
       <div class="col-xs-12">
-        <form id="alarmForm" action="javascript:document.setAlarm()" name="alarmForm" class="form-inline" onsubmit="return formValidation()">
+        <form id="alarmForm" action="javascript:document.View.setAlarm()" name="alarmForm" class="form-inline" onsubmit="return View.formValidation()">
           <input type="text"name="day" id="day" value="" placeholder="22" size="2" maxlength="2" class="form-control" /> /
           <input type="text"name="month" id="month" value="" placeholder="03" size="2" maxlength="2" class="form-control" /> /
           <input type="text"name="year" id="year" value="" placeholder="1996" size="4" maxlength="4" class="form-control" />
@@ -24,6 +24,8 @@
 
           <input type="submit" value="set alarm" id="submit" class="btn btn-large btn-success"/> 
         </form>
+        <div class="row">&nbsp;</div>
+        <div id="alarmsExist" class="row"></div>
       </div>
     </div>
     </div>
