@@ -14,13 +14,14 @@
     </div>
     <div id="content" class="row">
       <div class="col-xs-12">
-        <form id="alarmForm" action="javascript:document.View.setAlarm()" name="alarmForm" class="form-inline" onsubmit="return View.formValidation()">
-          <input type="text"name="day" id="day" value="" placeholder="22" size="2" maxlength="2" class="form-control" /> /
-          <input type="text"name="month" id="month" value="" placeholder="03" size="2" maxlength="2" class="form-control" /> /
-          <input type="text"name="year" id="year" value="" placeholder="1996" size="4" maxlength="4" class="form-control" />
-
-          <input type="text"name="hour" id="hour" value="" placeholder="22" size="2" maxlength="2" class="form-control" /> : 
-          <input type="text"name="min" id="min" value="" placeholder="34" size="2" maxlength="2" class="form-control" />  
+        <form id="alarmForm" action="javascript:document.AlarmsView().setAlarm()" name="alarmForm" class="form-inline">
+          <label for="day">Date</label>
+          <input type="text" name="day" id="day" value="" placeholder="22" size="2" maxlength="2" class="form-control" /> /
+          <input type="text" name="month" id="month" value="" placeholder="03" size="2" maxlength="2" class="form-control" /> /
+          <input type="text" name="year" id="year" value="" placeholder="1996" size="4" maxlength="4" class="form-control" />
+          <label for="hour">Time</label>
+          <input type="text" name="hour" id="hour" value="" placeholder="22" size="2" maxlength="2" class="form-control" /> : 
+          <input type="text" name="min" id="min" value="" placeholder="34" size="2" maxlength="2" class="form-control" />  
 
           <input type="submit" value="set alarm" id="submit" class="btn btn-large btn-success"/> 
         </form>

@@ -31,5 +31,5 @@ document.setCookie = (name, value, options)->
   document.cookie = updatedCookie;
 
 document.deleteCookie = (name)->
-  setCookie name, "", 
+  document.setCookie name, "", 
     expires: -1
