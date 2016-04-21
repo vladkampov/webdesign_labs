@@ -4,6 +4,20 @@ module.exports = function(grunt) {
       scripts: {
         files: ['src/coffee/**/*.coffee'],
         tasks: ['coffee']
+      },
+      styles: {
+        files: ['src/less/**/*.less'],
+        tasks: ['less']
+      }
+    },
+    less: {
+      dev: {
+        options : {
+          compress: true
+        },
+        files: {
+          'build/css/style.css': ['src/less/**/*.less']
+        }
       }
     },
     clean: {
@@ -12,7 +26,7 @@ module.exports = function(grunt) {
     coffee: {
       main: {
         files: {
-          'build/js/app.js': ['src/coffee/cookie.coffee', 'src/coffee/AlarmsCollection.coffee', 'src/coffee/AlarmModel.coffee', 'src/coffee/AlarmsView.coffee', 'src/coffee/app.coffee']
+          'build/js/app.js': ['src/coffee/*.coffee']
         }
       }
     },
@@ -39,12 +53,13 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['clean', 'coffee']);
+  grunt.registerTask('default', ['clean', 'coffee', 'less']);
   grunt.registerTask('runwatch', ['browserSync:dev', 'watch'])
   grunt.registerTask('runserver', ['browserSync:prod'])
 };

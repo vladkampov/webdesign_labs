@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Сalc</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="build/css/style.css" />
+</head>
+<body>
+  <div class="container clearfix">
+    <div id="header">
+      <h1>Calc on JS <br /><span>(actually on coffescript)</span></h1>
+    </div>
+    <div id="content">
+      <div class="row">
+        <div class="col-xs-12"><input id="result" name="result" type="text" class="form-control" value="0"/></div>
+      </div>
+     
+      <div class="row">
+        <div class="col-xs-3"><a href="#" id="clear" class="clear btn btn-large btn-info">AC</a></div>
+        <div class="col-xs-3"><a href="#" id="actSqr" class="act btn btn-large btn-info">x^2</a></div>
+        <div class="col-xs-3"><a href="#" id="actDegree" class="act btn btn-large btn-info">x^y</a></div>
+        <div class="col-xs-3"><a href="#" id="actDivision" class="act btn btn-large btn-warning">+</a></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"><a href="#" id="num7" class="num btn btn-large btn-default">7</a></div>
+        <div class="col-xs-3"><a href="#" id="num8" class="num btn btn-large btn-default">8</a></div>
+        <div class="col-xs-3"><a href="#" id="num9" class="num btn btn-large btn-default">9</a></div>
+        <div class="col-xs-3"><a href="#" id="actMultiply"class="act btn btn-large btn-warning">x</a></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"><a href="#" id="num4" class="num btn btn-large btn-default">4</a></div>
+        <div class="col-xs-3"><a href="#" id="num5" class="num btn btn-large btn-default">5</a></div>
+        <div class="col-xs-3"><a href="#" id="num6" class="num btn btn-large btn-default">6</a></div>
+        <div class="col-xs-3"><a href="#" id="actMinus"class="act btn btn-large btn-warning">-</a></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"><a href="#" id="num1" class="num btn btn-large btn-default">1</a></div>
+        <div class="col-xs-3"><a href="#" id="num2" class="num btn btn-large btn-default">2</a></div>
+        <div class="col-xs-3"><a href="#" id="num3" class="num btn btn-large btn-default">3</a></div>
+        <div class="col-xs-3"><a href="#" id="actPlus"class="act btn btn-large btn-warning">+</a></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6"><a href="#" id="num0" class="num btn btn-large btn-default">0</a></div>
+        <div class="col-xs-3"><a href="#" id="dot" class="dot btn btn-large btn-default">.</a></div>
+        <div class="col-xs-3"><a href="#" id="equal" class="act btn btn-large btn-warning">=</a></div>
+      </div>
+    </div>
+  </div>
+  <script src="build/js/app.js" type="text/javascript"></script>
+</body>
+</html>
