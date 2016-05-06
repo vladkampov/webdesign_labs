@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<bar-chart>
+   <bar>
+      <title>1 value</title>
+      <value>32</value>
+   </bar>
+   <bar>
+      <title>2 value</title>
+      <value>64</value>
+   </bar>
+</bar-chart>
