@@ -2,27 +2,32 @@
 
 Yes, I was very meticulous in the work of this task. But it's damn nice.
 
-To run one of this labs on your own Unix you need to:
+## Dependencies
+So. Firstly you need to install the latest versions of NodeJS and NPM. 
 ```
-    sudo npm install -g npm
-    sudo npm install -g npm 
-``` 
-yes, twice ¯\\_(ツ)_/¯
-then
-```
-    git clone https://github.com/vladkampov/webdesign_labs.git
-    cd webdesign_labs/
-    ls
-```
-Then go to folder with your lab and for download all dependencies you need to run
-```
-    npm install
-```
-It command simply install all dependencies for your own lab.
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
-Thanks to Grunt we have a few comands to control current project 
-  - To compile all project run``` grunt ```
-  - To clear temp fiels just run ``` grunt clear ```
-  - To compile your project and run server (yes, browser will open automaticly) run ``` grunt runserver ```
-  - To compile, run project and enable `Grunt Watch task` to comfortable development simply run ``` grunt runwatch ``` and all of your changes in src files will compile automaticly and browser will refresh... wait for it... AUTOMATICLY! 
-  
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_4.x | bash -
+apt-get install -y nodejs
+```
+If you have `nodejs` already installed and want to update, then first remove current instalation and install it again using scripts above.
+```
+sudo apt-get remove --purge nodejs npm
+```
+
+## Instalation
+Ok now. To install all of awesome things to use this lab you need just `npm install`. Cool, yeah?
+
+## Usage
+Thanks to Grunt we have a few comands to control current project. 
+- `grunt` to compile lab
+- `grunt clean` for clean all trash like build folder
+- `grunt runwatch` to starting Grunt Watch awesome thing for development and automaticly compile all files from coffescript and less c: 
+*(in lab 1 and 2 also starts `grunt runserver`)*
+- `grunt runserver`starts simple static server, which automaticly bring you to browser right after start. No more unnecessary movements. Just do not forget to compile. **Only for 1 and 2 labs**
+
+
+![Dancing cat, dude](http://99px.ru/sstorage/86/2015/09/image_861809151414179543807.gif)
