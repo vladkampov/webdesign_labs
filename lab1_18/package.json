@@ -4,7 +4,8 @@
   "description": "Lab1 for webdesign",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "grunt clean && grunt && grunt runserver"
   },
   "author": "Vlad Sydorenko",
   "license": "ISC",

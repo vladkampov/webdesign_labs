@@ -28,6 +28,6 @@ Thanks to Grunt we have a few comands to control current project.
 - `grunt runwatch` to starting Grunt Watch awesome thing for development and automaticly compile all files from coffescript and less c: 
 *(in lab 1 and 2 also starts `grunt runserver`)*
 - `grunt runserver`starts simple static server, which automaticly bring you to browser right after start. No more unnecessary movements. Just do not forget to compile. **Only for 1 and 2 labs**
-
+- `npm start` to run project.
 
 ![Dancing cat, dude](http://99px.ru/sstorage/86/2015/09/image_861809151414179543807.gif)
