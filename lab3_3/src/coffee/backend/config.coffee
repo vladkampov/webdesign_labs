@@ -38,9 +38,12 @@ writeToXML = (filename, dir)->
     xml = builder.buildObject {'dir': dir}
     fs.writeFile fileXML, xml
 
-readFromXML = (filename)->
-    return fs.readFile filename, (err, data)->
-        parser.parseString data, (err, result)->
-            result['filesystem']['dir'][0]['children']
-
+# readFromXML = (filename)->
+xml = []
+fs.readFile fileXML, (err, data)->
+    if err
+        throw err
+    parser.parseString data, (err, result)->
+        xml = result['filesystem']['dir'][0]['children']
+        
 writeToXML fileXML, dirTree(path.join(__dirname, '../..', 'public'))
