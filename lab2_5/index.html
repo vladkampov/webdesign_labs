@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Slideshow</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="build/css/style.css" />
+</head>
+<body>
+  <div class="container clearfix">
+    <div id="header">
+      <h1>Slideshow on native CSS with JS settings <br /><span>(actually on coffeescript)</span></h1>
+    </div>
+    <div id="content">
+      <div class="col-xs-6">
+        <div class="one_third">
+          <input checked="checked" type="radio" name="slides1" id="slide1_1">
+          <input type="radio" name="slides1" id="slide1_2">
+          <input type="radio" name="slides1" id="slide1_3">
+          <div class="howItWorks__controls">
+            <label for="slide1_1" class=""></label>
+            <label for="slide1_2" class=""></label>
+            <label for="slide1_3" class=""></label>
+          </div>
+          <div id="slides1" class="slider">
+            <div class="slider__overflow">
+              <div class="slider__inner">
+                <div class="step step_one--one">
+                  <div class="step__overlay">
+                    <div class="step__description">
+                      <h1 class="step__title">Sed leo enim,<br>condimentum</h1>
+                      <p>Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="step step_one--two">
+                  <div class="step__overlay">
+                    <div class="step__description">
+                      <h1 class="step__title">Sed leo enim,<br>condimentum</h1>
+                      <p>Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="step step_one--three">
+                  <div class="step__overlay">
+                    <div class="step__description">
+                      <h1 class="step__title">Sed leo enim,<br>condimentum</h1>
+                      <p>Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div id="settings">
+          <h2>Settings</h2>
+          <form action="#" name="form" onsubmit="saveState(this);return false;">
+            <div class="form-group">
+              <label for="time">Time Interval (in ms):</label>
+              <input name="time" type="text" class="form-control" value="1500" onkeydown="checkInput(event);"/>
+            </div> 
+            <div class="form-group">
+              <button type="submit" class="btn btn-success pull-right">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+  <script src="build/js/app.js" type="text/javascript"></script>
+</body>
+</html>
